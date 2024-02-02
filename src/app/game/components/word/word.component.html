@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="board-game">
+    @for(letter of randomWord; track $index;){
+      <div>{{secretWord![$index] }}</div>
+    }
+  </div>
+</div>
+
+<!-- player.secretWord![$index] -->
