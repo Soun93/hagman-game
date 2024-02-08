@@ -46,7 +46,7 @@ export class WordComponent implements OnInit  {
         }
       });
     } else {
-      alert('No se encontró la palabra')
+      alert('No se encontró la letra. ¡Intenta otra!')
     }
   }
   winGame(){
