@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WordComponent implements OnInit  {
   public randomWordUrl:string = 'https://random-word-api.herokuapp.com/word';
-  public randomWordUrlEn:string = 'https://random-word-api.herokuapp.com/word?lang=es';
+  public randomWordUrlEn:string = 'https://random-word-api.herokuapp.com/word?lang=en';
   public randomWord:string = '';
   public secretWord:string[] = [];
 
@@ -28,6 +28,7 @@ export class WordComponent implements OnInit  {
   getRandomWord(): void {
     this.http.get<string[]>(this.randomWordUrlEn).subscribe((data: string[]) => { 
       this.randomWord = data[0];
+
       this.secretWord = this.replaceWord;
     });
   }

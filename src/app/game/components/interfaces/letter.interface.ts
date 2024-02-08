@@ -1,5 +1,5 @@
 export interface PlayerGameData {
-  guessLetter?: string,
-  secretWord?: any,
+  guessLetter: string,
+  secretWord?: string,
   numberOfGuesses?: number,
 }
